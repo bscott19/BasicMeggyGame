@@ -11,10 +11,16 @@ void setup()
   x = 7;
   y = 4;
   color=1;
+  Tone_Start(17500,300);
+  delay(350);
+  Tone_Start(17500,500);
+  delay(500);
+  Tone_Start(13000,800);
 }
 
 void loop()
 {
+  delay(125);
   DrawPx(x,y,color);
   CheckButtonsDown();
   MovePlayer();
@@ -71,6 +77,9 @@ void changecolor()
   if (Button_A)
   {
     color++;
+    Tone_Start(1500,100);
+    delay(110);
+    Tone_Start(1300,80);
   }
   if (color>14)
   {
@@ -87,5 +96,10 @@ void clearslate()
   if (Button_B)
   {
     ClearSlate();
+    Tone_Start(18182,150);
+    delay(150);
+    Tone_Start(20000,125);
+    delay(125);
+    Tone_Start(30000,250);
   }
 }
